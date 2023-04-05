@@ -117,7 +117,7 @@ use_devenv() {
 
       if [[ -f "$flake_dir/.devenv/imports.txt" ]]; then
         for file in $(cat "$flake_dir/.devenv/imports.txt"); do
-            files_to_watch+=("$file")
+            files_to_watch+=("$file/devenv.nix")
         done
       fi
     fi
